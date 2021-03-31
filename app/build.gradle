@@ -39,18 +39,28 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
     implementation "androidx.core:core-ktx:$versions.ktx_core"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
 
     // Android
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
 
+    // Koin
+    implementation "org.koin:koin-android:$versions.koin"
+    implementation "org.koin:koin-android-viewmodel:$versions.koin"
+    testImplementation "org.koin:koin-test:$versions.koin"
+    androidTestImplementation "org.koin:koin-test:$versions.koin"
+
     // Jackson
     implementation group: "com.fasterxml.jackson.core", name: "jackson-databind", version: "$versions.jackson"
     implementation group: "com.fasterxml.jackson.module", name: "jackson-module-kotlin", version: "$versions.jackson"
 
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-jackson:$versions.retrofit"
+
     // Testing
-    testImplementation "junit:junit:$versions.junit"
     androidTestImplementation "androidx.test.ext:junit:$versions.androidxjunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
 }

@@ -1,4 +1,7 @@
 package com.example.testeurosport.viewmodel
 
-class HomeViewModel {
+import androidx.lifecycle.ViewModel
+import com.example.testeurosport.model.DataRepository
+
+class HomeViewModel(private val dataRepository: DataRepository) : ViewModel() {
 }
