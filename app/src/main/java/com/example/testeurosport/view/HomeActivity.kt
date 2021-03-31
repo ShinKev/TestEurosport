@@ -1,9 +1,10 @@
-package com.example.testeurosport
+package com.example.testeurosport.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.testeurosport.R
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
