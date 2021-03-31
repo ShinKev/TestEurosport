@@ -23,12 +23,12 @@ class DataRepositoryTest {
 
     private val webserviceData = WebserviceData(
         videos = listOf(Video(
-            1,
-            "TestVideo",
-            "http://test.thumb",
-            "http://test.url",
-            100000.0,
-            Sport(id = 10, name = "TestSport1")
+            id = 1,
+            title = "TestVideo",
+            thumb = "http://test.thumb",
+            url = "http://test.url",
+            date = 100000.0,
+            sport = Sport(id = 10, name = "TestSport1")
         )),
         stories = listOf(Story(
             id = 2,

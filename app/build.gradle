@@ -37,14 +37,15 @@ android {
 dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
-    implementation "androidx.core:core-ktx:$versions.ktx_core"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
 
     // Android
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+    testImplementation "android.arch.core:core-testing:$versions.androidarch"
 
     // Koin
     implementation "org.koin:koin-android:$versions.koin"
@@ -65,6 +66,9 @@ dependencies {
     androidTestImplementation "io.mockk:mockk-android:$versions.mockk"
 
     // AndroidX
-    androidTestImplementation "androidx.test.ext:junit:$versions.androidxjunit"
+    implementation "androidx.core:core-ktx:$versions.ktx_core"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.ktx_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.ktx_lifecycle"
+    androidTestImplementation "androidx.test.ext:junit:$versions.junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
 }
