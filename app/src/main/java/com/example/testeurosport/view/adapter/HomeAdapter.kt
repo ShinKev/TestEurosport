@@ -45,7 +45,8 @@ class HomeAdapter(private val articleList: List<Article>, private val homeFragme
             Glide.with(binding.root).load(video.thumb).into(binding.videoImage)
             binding.sportText.text = video.sport?.name
             binding.titleText.text = video.title
-            binding.viewsText.text = binding.root.context.getString(R.string.views_placeholder_text).format(video.views)
+            binding.viewsText.text = binding.root.context.getString(R.string.views_placeholder_text)
+                    .format(video.views)
 //            binding.playButton.setOnClickListener(listener)
         }
     }
