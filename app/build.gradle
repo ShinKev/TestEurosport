@@ -38,6 +38,7 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
 
@@ -46,6 +47,13 @@ dependencies {
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
     testImplementation "android.arch.core:core-testing:$versions.androidarch"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$versions.navigation"
+    androidTestImplementation "androidx.navigation:navigation-testing:$versions.navigation"
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha09"
 
     // Koin
     implementation "org.koin:koin-android:$versions.koin"

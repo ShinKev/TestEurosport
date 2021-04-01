@@ -9,6 +9,8 @@ versions.material = "1.3.0"
 versions.constraintlayout = "2.0.4"
 versions.androidarch = "2.1.0"
 
+versions.navigation = "2.3.4"
+
 versions.koin = "2.2.2"
 
 versions.jackson = "2.12.2"
