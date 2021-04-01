@@ -5,23 +5,47 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.testeurosport.model.DataRepository
+import com.example.testeurosport.model.data.Article
 import com.example.testeurosport.model.data.Story
 import com.example.testeurosport.model.data.Video
+import com.example.testeurosport.model.data.WebserviceData
 import kotlinx.coroutines.launch
 
 class HomeViewModel(private val dataRepository: DataRepository) : ViewModel() {
 
-    private val videoListLiveData = MutableLiveData<List<Video>>()
-    private val storyListLiveData = MutableLiveData<List<Story>>()
+    private var webserviceData: WebserviceData? = null
+    private val articleListLiveData = MutableLiveData<List<Article>>()
 
-    fun loadData() {
+    private fun loadData() {
         viewModelScope.launch {
-            val webserviceData = dataRepository.getData()
-            videoListLiveData.postValue(webserviceData.videos)
-            storyListLiveData.postValue(webserviceData.stories)
+            webserviceData = dataRepository.getData()
+            articleListLiveData.postValue(processData(webserviceData))
         }
     }
 
-    fun getVideoList(): LiveData<List<Video>> = videoListLiveData
-    fun getStoryList(): LiveData<List<Story>> = storyListLiveData
+    private fun processData(webserviceData: WebserviceData?): List<Article> {
+        if (webserviceData == null) return listOf()
+
+        val videoList = webserviceData.videos as MutableList<Video>
+        val storyList = webserviceData.stories as MutableList<Story>
+
+        storyList.sortByDescending { it.date }
+        videoList.sortByDescending { it.date }
+
+        val articleList = mutableListOf<Article>()
+        articleList.addAll(storyList)
+        var index = 1
+        videoList.forEach{
+            articleList.add(index, it)
+            index += 2
+        }
+
+        return articleList
+    }
+
+    fun getArticleList(): LiveData<List<Article>> {
+        if (webserviceData == null) loadData()
+        return articleListLiveData
+    }
+
 }

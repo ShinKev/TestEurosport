@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.jackson.JacksonConverterFactory
 
 object RetrofitClient {
-    private const val rootUrl = "https://static.leboncoin.fr/img/shared/"
+    private const val rootUrl = "https://extendsclass.com/api/json-storage/bin/"
     private val jacksonObjectMapper = jacksonObjectMapper()
     private val okHttpClient = OkHttpClient()
 

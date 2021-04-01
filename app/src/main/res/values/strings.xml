@@ -13,4 +13,5 @@
     <string name="story_back_contentdescription">Use this button to go back to the list of stories and videos</string>
     <string name="share_story_contentdescription">Use this button to share the story</string>
     <string name="views_text">1000 views</string>
+    <string name="featured_text">FEATURED</string>
 </resources>

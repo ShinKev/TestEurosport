@@ -3,7 +3,6 @@ package com.example.testeurosport
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.testeurosport.model.DataRepository
 import com.example.testeurosport.model.data.Sport
-import com.example.testeurosport.model.data.Story
 import com.example.testeurosport.model.data.Video
 import com.example.testeurosport.model.data.WebserviceData
 import com.example.testeurosport.viewmodel.HomeViewModel
