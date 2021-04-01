@@ -81,6 +81,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$versions.glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$versions.glide"
 
+    // TimeAgo
+    implementation "com.github.marlonlom:timeago:$versions.timeago"
+
     // Mockk
     testImplementation "io.mockk:mockk:$versions.mockk"
     androidTestImplementation "io.mockk:mockk-android:$versions.mockk"

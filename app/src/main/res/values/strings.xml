@@ -6,7 +6,7 @@
     <string name="sport_text">Sport</string>
     <string name="title_text">Title Example</string>
     <string name="author_date_text">By Author - 10 min ago</string>
-    <string name="author_date_placeholder_text">By %d - %d ago</string>
+    <string name="author_date_placeholder_text">By %1$s - %2$s</string>
     <string name="date_text">10 min ago</string>
     <string name="author_text">Author</string>
     <string name="by_text">By</string>

@@ -37,7 +37,7 @@ class StoryFragment : Fragment() {
         binding.sportText.text = story.sport?.name
         binding.titleText.text = story.title
         binding.authorText.text = story.author
-        binding.dateText.text = story.date.toString()
+        binding.dateText.text = story.getTimeAgoString()
         binding.storyText.text = story.teaser
         binding.backButton.setOnClickListener {
             this.requireActivity().onBackPressed()

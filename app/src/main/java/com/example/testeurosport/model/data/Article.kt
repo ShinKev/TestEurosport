@@ -1,7 +1,9 @@
 package com.example.testeurosport.model.data
 
+import android.icu.text.RelativeDateTimeFormatter
 import android.os.Parcelable
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.github.marlonlom.utilities.timeago.TimeAgo
 import kotlinx.parcelize.Parcelize
 
 sealed class Article
@@ -27,7 +29,12 @@ data class Story(
     val date: Double = 0.0,
     val author: String = "",
     val sport: Sport? = null
-) : Article(), Parcelable
+) : Article(), Parcelable {
+    fun getTimeAgoString(): String {
+        val timeInMillis = (date*1000).toLong()
+        return TimeAgo.using(timeInMillis)
+    }
+}
 
 @Parcelize
 @JsonIgnoreProperties(ignoreUnknown = true)

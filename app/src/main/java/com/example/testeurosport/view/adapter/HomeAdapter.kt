@@ -25,13 +25,16 @@ class HomeAdapter(private val articleList: List<Article>, private val homeFragme
     class StoryViewHolder(private val binding: StoryItemBinding) : BaseViewHolder(binding.root) {
         override fun bind(article: Article, homeFragment: HomeFragment) {
             val story = article as Story
+            val storyOnClickListener = StoryOnClickListener(story, homeFragment)
 
             Glide.with(binding.root).load(story.image).into(binding.storyImage)
             binding.sportText.text = story.sport?.name
             binding.titleText.text = story.title
-            binding.dateText.text = story.date.toString()
-            binding.storyImage.setOnClickListener(StoryOnClickListener(story, homeFragment))
-
+            binding.authorDateText.text =
+                binding.root.context.getString(R.string.author_date_placeholder_text)
+                    .format(story.author, story.getTimeAgoString())
+            binding.storyImage.setOnClickListener(storyOnClickListener)
+            binding.titleText.setOnClickListener(storyOnClickListener)
         }
     }
 
@@ -42,7 +45,7 @@ class HomeAdapter(private val articleList: List<Article>, private val homeFragme
             Glide.with(binding.root).load(video.thumb).into(binding.videoImage)
             binding.sportText.text = video.sport?.name
             binding.titleText.text = video.title
-            binding.viewsText.text = binding.root.context.getString(R.string.views_placeholder_text, video.views)
+            binding.viewsText.text = binding.root.context.getString(R.string.views_placeholder_text).format(video.views)
 //            binding.playButton.setOnClickListener(listener)
         }
     }

@@ -19,6 +19,8 @@ versions.retrofit = "2.9.0"
 
 versions.glide = "4.12.0"
 
+versions.timeago = "4.0.3"
+
 versions.mockk = "1.11.0"
 
 versions.ktx_core = "1.3.2"
