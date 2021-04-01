@@ -1,6 +1,5 @@
 package com.example.testeurosport.model.data
 
-import android.icu.text.RelativeDateTimeFormatter
 import android.os.Parcelable
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.github.marlonlom.utilities.timeago.TimeAgo
@@ -31,7 +30,7 @@ data class Story(
     val sport: Sport? = null
 ) : Article(), Parcelable {
     fun getTimeAgoString(): String {
-        val timeInMillis = (date*1000).toLong()
+        val timeInMillis = (date * 1000).toLong()
         return TimeAgo.using(timeInMillis)
     }
 }

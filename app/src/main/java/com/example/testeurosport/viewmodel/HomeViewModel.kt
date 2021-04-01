@@ -35,7 +35,7 @@ class HomeViewModel(private val dataRepository: DataRepository) : ViewModel() {
         val articleList = mutableListOf<Article>()
         articleList.addAll(storyList)
         var index = 1
-        videoList.forEach{
+        videoList.forEach {
             articleList.add(index, it)
             index += 2
         }
