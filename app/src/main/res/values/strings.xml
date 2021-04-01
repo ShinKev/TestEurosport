@@ -6,6 +6,7 @@
     <string name="sport_text">Sport</string>
     <string name="title_text">Title Example</string>
     <string name="author_date_text">By Author - 10 min ago</string>
+    <string name="author_date_placeholder_text">By %d - %d ago</string>
     <string name="date_text">10 min ago</string>
     <string name="author_text">Author</string>
     <string name="by_text">By</string>
@@ -14,4 +15,5 @@
     <string name="share_story_contentdescription">Use this button to share the story</string>
     <string name="views_text">1000 views</string>
     <string name="featured_text">FEATURED</string>
+    <string name="views_placeholder_text">%d views</string>
 </resources>

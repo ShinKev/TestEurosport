@@ -1,4 +1,4 @@
-package com.example.testeurosport.view
+package com.example.testeurosport.view.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.testeurosport.databinding.FragmentStoryBinding
 
 class StoryFragment : Fragment() {
@@ -32,6 +33,7 @@ class StoryFragment : Fragment() {
 
         val story = args.story
 
+        Glide.with(binding.root).load(story.image).into(binding.storyImage)
         binding.sportText.text = story.sport?.name
         binding.titleText.text = story.title
         binding.authorText.text = story.author
