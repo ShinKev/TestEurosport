@@ -17,6 +17,8 @@ import kotlin.test.assertEquals
 class DataRepositoryTest {
 
     @MockK
+    private lateinit var retrofitClient: RetrofitClient
+    @MockK
     private lateinit var webservice: Webservice
 
     private lateinit var dataRepository: DataRepository
@@ -48,9 +50,8 @@ class DataRepositoryTest {
     @BeforeTest
     fun setup() {
         MockKAnnotations.init(this)
-        mockkObject(RetrofitClient)
-        every { RetrofitClient.webservice } returns webservice
-        dataRepository = DataRepository()
+        every { retrofitClient.webservice } returns webservice
+        dataRepository = DataRepository(retrofitClient)
     }
 
     @Test
