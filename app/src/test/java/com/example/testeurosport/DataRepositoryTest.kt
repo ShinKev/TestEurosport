@@ -2,6 +2,7 @@ package com.example.testeurosport
 
 import com.example.testeurosport.model.DataRepository
 import com.example.testeurosport.model.data.Sport
+import com.example.testeurosport.model.data.Story
 import com.example.testeurosport.model.data.Video
 import com.example.testeurosport.model.data.WebserviceData
 import com.example.testeurosport.model.remote.RetrofitClient
@@ -21,23 +22,27 @@ class DataRepositoryTest {
     private lateinit var dataRepository: DataRepository
 
     private val webserviceData = WebserviceData(
-        videos = listOf(Video(
-            id = 1,
-            title = "TestVideo",
-            thumb = "http://test.thumb",
-            url = "http://test.url",
-            date = 100000.0,
-            sport = Sport(id = 10, name = "TestSport1")
-        )),
-        stories = listOf(Story(
-            id = 2,
-            title = "TestStory",
-            teaser = "TestTeaser",
-            image = "http://test.image",
-            date = 110000.0,
-            author = "TestAuthor",
-            sport = Sport(id = 20, name = "TestSport2")
-        ))
+        videos = listOf(
+            Video(
+                id = 1,
+                title = "TestVideo",
+                thumb = "http://test.thumb",
+                url = "http://test.url",
+                date = 100000.0,
+                sport = Sport(id = 10, name = "TestSport1")
+            )
+        ),
+        stories = listOf(
+            Story(
+                id = 2,
+                title = "TestStory",
+                teaser = "TestTeaser",
+                image = "http://test.image",
+                date = 110000.0,
+                author = "TestAuthor",
+                sport = Sport(id = 20, name = "TestSport2")
+            )
+        )
     )
 
     @BeforeTest

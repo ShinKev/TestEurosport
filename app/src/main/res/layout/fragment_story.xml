@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/story_image"
+            android:id="@+id/story_detail_image"
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:contentDescription="@string/image_contentdescription"
@@ -24,7 +24,7 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/sport_text"
+            android:id="@+id/sport_detail_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -37,12 +37,12 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/story_image"
+            app:layout_constraintBottom_toBottomOf="@+id/story_detail_image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/story_image" />
+            app:layout_constraintTop_toBottomOf="@+id/story_detail_image" />
 
         <TextView
-            android:id="@+id/title_text"
+            android:id="@+id/title_detail_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -54,7 +54,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sport_text" />
+            app:layout_constraintTop_toBottomOf="@+id/sport_detail_text" />
 
         <TextView
             android:id="@+id/by_text"
@@ -64,11 +64,11 @@
             android:text="@string/by_text"
             android:textColor="@color/black"
             android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/title_text"
-            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+            app:layout_constraintStart_toStartOf="@+id/title_detail_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_detail_text" />
 
         <TextView
-            android:id="@+id/author_text"
+            android:id="@+id/author_detail_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -77,10 +77,10 @@
             android:textColor="@color/lightblue"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/by_text"
-            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+            app:layout_constraintTop_toBottomOf="@+id/title_detail_text" />
 
         <TextView
-            android:id="@+id/date_text"
+            android:id="@+id/date_detail_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -88,11 +88,11 @@
             android:text="@string/date_text"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/author_text"
+            app:layout_constraintTop_toTopOf="@+id/author_detail_text"
             tools:ignore="SmallSp" />
 
         <TextView
-            android:id="@+id/story_text"
+            android:id="@+id/story_detail_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -105,7 +105,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date_text" />
+            app:layout_constraintTop_toBottomOf="@+id/date_detail_text" />
 
         <ImageButton
             android:id="@+id/back_button"

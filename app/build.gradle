@@ -18,7 +18,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.testeurosport.EmptyTestJUnitRunner"
     }
 
     buildFeatures {
@@ -92,6 +92,7 @@ dependencies {
     implementation "androidx.core:core-ktx:$versions.ktx_core"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.ktx_lifecycle"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.ktx_lifecycle"
+    debugImplementation "androidx.fragment:fragment-testing:$versions.fragment"
     androidTestImplementation "androidx.test.ext:junit:$versions.junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
 }

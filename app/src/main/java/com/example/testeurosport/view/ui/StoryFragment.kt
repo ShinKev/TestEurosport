@@ -33,12 +33,12 @@ class StoryFragment : Fragment() {
 
         val story = args.story
 
-        Glide.with(binding.root).load(story.image).into(binding.storyImage)
-        binding.sportText.text = story.sport?.name
-        binding.titleText.text = story.title
-        binding.authorText.text = story.author
-        binding.dateText.text = story.getTimeAgoString()
-        binding.storyText.text = story.teaser
+        Glide.with(binding.root).load(story.image).into(binding.storyDetailImage)
+        binding.sportDetailText.text = story.sport?.name
+        binding.titleDetailText.text = story.title
+        binding.authorDetailText.text = story.author
+        binding.dateDetailText.text = story.getTimeAgoString()
+        binding.storyDetailText.text = story.teaser
         binding.backButton.setOnClickListener {
             this.requireActivity().onBackPressed()
         }

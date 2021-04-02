@@ -26,7 +26,7 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/sport_text"
+            android:id="@+id/sport_video_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/video_image" />
 
         <TextView
-            android:id="@+id/title_text"
+            android:id="@+id/title_video_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -56,7 +56,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sport_text" />
+            app:layout_constraintTop_toBottomOf="@+id/sport_video_text" />
 
         <TextView
             android:id="@+id/views_text"
@@ -66,8 +66,8 @@
             android:text="@string/views_text"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/title_text"
-            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+            app:layout_constraintStart_toStartOf="@+id/title_video_text"
+            app:layout_constraintTop_toBottomOf="@+id/title_video_text" />
 
         <ImageButton
             android:id="@+id/play_button"

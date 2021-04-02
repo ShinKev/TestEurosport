@@ -12,8 +12,8 @@ class VideoViewHolder(private val binding: VideoItemBinding) : BaseViewHolder(bi
         val video = article as Video
 
         Glide.with(binding.root).load(video.thumb).into(binding.videoImage)
-        binding.sportText.text = video.sport?.name
-        binding.titleText.text = video.title
+        binding.sportVideoText.text = video.sport?.name
+        binding.titleVideoText.text = video.title
         binding.viewsText.text = binding.root.context.getString(R.string.views_placeholder_text)
             .format(video.views)
 //            binding.playButton.setOnClickListener(listener)

@@ -16,13 +16,6 @@ class HomeViewModel(private val dataRepository: DataRepository) : ViewModel() {
     private var webserviceData: WebserviceData? = null
     private val articleListLiveData = MutableLiveData<List<Article>>()
 
-    private fun loadData() {
-        viewModelScope.launch {
-            webserviceData = dataRepository.getData()
-            articleListLiveData.postValue(processData(webserviceData))
-        }
-    }
-
     private fun processData(webserviceData: WebserviceData?): List<Article> {
         if (webserviceData == null) return listOf()
 
@@ -41,6 +34,13 @@ class HomeViewModel(private val dataRepository: DataRepository) : ViewModel() {
         }
 
         return articleList
+    }
+
+    private fun loadData() {
+        viewModelScope.launch {
+            webserviceData = dataRepository.getData()
+            articleListLiveData.postValue(processData(webserviceData))
+        }
     }
 
     fun getArticleList(): LiveData<List<Article>> {

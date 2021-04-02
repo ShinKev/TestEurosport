@@ -25,12 +25,12 @@ class StoryViewHolder(private val binding: StoryItemBinding) : BaseViewHolder(bi
         val storyOnClickListener = StoryOnClickListener(story, homeFragment)
 
         Glide.with(binding.root).load(story.image).into(binding.storyImage)
-        binding.sportText.text = story.sport?.name
-        binding.titleText.text = story.title
+        binding.sportStoryText.text = story.sport?.name
+        binding.titleStoryText.text = story.title
         binding.authorDateText.text =
             binding.root.context.getString(R.string.author_date_placeholder_text)
                 .format(story.author, story.getTimeAgoString())
         binding.storyImage.setOnClickListener(storyOnClickListener)
-        binding.titleText.setOnClickListener(storyOnClickListener)
+        binding.titleStoryText.setOnClickListener(storyOnClickListener)
     }
 }
