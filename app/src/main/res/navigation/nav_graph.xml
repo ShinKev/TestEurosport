@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_storyFragment"
             app:destination="@id/storyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
     </fragment>
     <fragment
         android:id="@+id/storyFragment"
@@ -22,5 +25,14 @@
         <argument
             android:name="story"
             app:argType="com.example.testeurosport.model.data.Story" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.testeurosport.view.ui.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <argument
+            android:name="urlVideo"
+            app:argType="string" />
     </fragment>
 </navigation>

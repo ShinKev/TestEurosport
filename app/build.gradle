@@ -81,6 +81,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$versions.glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$versions.glide"
 
+    // MagicalExoPlayer
+    implementation "com.github.HamidrezaAmz:MagicalExoPlayer:$versions.exoplayer"
+
     // TimeAgo
     implementation "com.github.marlonlom:timeago:$versions.timeago"
 
