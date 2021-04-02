@@ -11,6 +11,7 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -64,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="@string/views_text"
+            android:textColor="#8E8E8E"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/title_video_text"

@@ -3,6 +3,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ui.StoryFragment">
@@ -86,6 +87,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="13dp"
             android:text="@string/date_text"
+            android:textColor="#8E8E8E"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/author_detail_text"
